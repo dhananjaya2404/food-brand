@@ -76,17 +76,52 @@ FastAPI automatically generates interactive API documentation:
 
 ## 📂 Project Structure
 
-```plaintext
-FD_backend/
+          FD_backend/
+│
 ├── app/
-│   ├── auth/           # Authentication routes & logic
-│   ├── core/           # Core configuration (Security, Database, etc.)
-│   ├── models/         # Database models (SQLAlchemy)
-│   ├── schemas/        # Pydantic schemas (Request/Response models)
-│   └── main.py         # Application entry point
-├── requirements.txt    # Python dependencies
-└── README.md           # Project documentation
-```
+│   ├── main.py
+│   │
+│   ├── database/
+│   │   ├── base.py
+│   │   ├── session.py
+│   │   └── __init__.py
+│   │
+│   ├── models/
+│   │   ├── user.py
+│   │   ├── restaurant.py
+│   │   ├── menu.py
+│   │   ├── cart.py
+│   │   ├── order.py
+│   │   └── delivery_partner.py
+│   │
+│   ├── schemas/
+│   │   ├── user.py
+│   │   ├── restaurant.py
+│   │   ├── menu.py
+│   │   ├── cart.py
+│   │   └── order.py
+│   │
+│   ├── routers/
+│   │   ├── auth_routes.py
+│   │   ├── restaurant_routes.py
+│   │   ├── menu_routes.py
+│   │   ├── cart_routes.py
+│   │   ├── order_routes.py
+│   │   └── analytics.py
+│   │
+│   ├── services/
+│   │   └── delivery_assignment.py
+│   │
+│   ├── dependencies/
+│   │   ├── auth.py
+│   │   └── roles.py
+│   │
+│   └── core/
+│       └── security.py
+│
+├── requirements.txt
+└── README.md
+
 
 ## 🤝 Contributing
 
